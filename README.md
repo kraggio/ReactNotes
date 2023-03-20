@@ -1,3 +1,3 @@
 # ReactNotes
 
-This will contain notes and applications that are walked through in Udemy's React course
+This will contain info from Udemy's React course
