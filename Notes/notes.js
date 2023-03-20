@@ -83,4 +83,141 @@ React code is written in a "Declarative Way"!
 
 - Create react app simplifies development process
 npx create-react-app my-app
+
+- React code is basically just JavaScript code
+
+--Introducing JSX--
+- JSX stands for JavaScript XML
+- HTML code in JavaScript
+- Only works because of transformation steps behind the scene that transform the js code to more browser friendly code
+- Can find this transformed code when inspecting the app
+
+--How React Works--
+- Building our own custom HTML elements with the declarativve approach
+
+ // const para = document.createElement("p");
+  // para.textContext = "This is also visible";
+  // document.getElementById("root").append(para); 
+  //above is how it would be done using js, called imperative
+
+  Coding Exercise 2: Working with JSX Code
+
+Your task is to edit the JSX code of a provided React component such that it displays a h1 element with the text "Exercise done!" on the page.
+
+import React from 'react';
+
+// don't change the Component name "App"
+export default function App() {
+    return (
+        <div>
+            <p>Practicing React...</p>
+            <h1>Exercise done!</h1>
+        </div>
+    );
+}
+For this challenge, by adding the <h1> HTML element within the <div>, this exercises the use of JSX. 
+
+--Building a First Custom Component--
+- With React, we build a component tree. With App at the top
+- Only the top most component is rendered into the UI
+- A component in React is just a special kind of JavaScript function
+
+Coding Exercise 3: Building a first Component
+
+Your task is to build a custom <ExerciseComponent /> that outputs the text "First exercise - done!" on the screen.
+
+My App.js looked like...
+import React from 'react';
+import MyCmp from './ExerciseComponent'
+
+// don't change the Component name "App"
+export default function App() {
+    return <MyCmp></MyCmp>;
+}
+
+My ExerciseComponet.js looked like...
+import React from 'react';
+// Todo: Add your component code
+// Important: Use export default function MyCmp() { ... }, don't define "export default" on a separate line!
+
+export default function MyCmp() {
+    return <h2>First exercise - done!</h2>
+}
+
+Upon doing this exercise, I was intitially confused with the 'export default function App(){...} but once I read the instructions further I was able to figure it out
+
+--Writing more complex JSX Code--
+function ExpenseItem() {
+  return <div>Date</div><div>Title</div><div>Amount</div>;
+}
+
+- This does not work because you can only have one root element per return statement. 
+
+- className used when working with css within React, since class is specific to javascript
+
+- For the most part, hard code is unrealistic (especially for our App)
+
+--Passing Data via "props"--
+
+- We can make components reusable by using parameters and props.
+- Components can't just use data stored in other components, but we can pass data to the custom component by adding an attribute
+- Props stand for properties
+
+
+Coding Exercise 4: Passing Data via "props"
+
+My App.js looked like...
+// don't change the Component name "App"
+export default function App() {
+    const products = [
+        {
+            id: "e1",
+            title: "Product 1",
+            price: "10",
+            description: "First product",
+        },
+        {
+            id: "e2",
+            title: "Product 2",
+            price: "20",
+            description: "Second product",
+        },
+    ];
+    return (
+        <div>
+            <h1>My Demo Shop</h1>
+            <Product 
+            title={products[0].title}
+            price={products[0].price}
+            description={products[0].description}
+            />
+            <Product
+            title={products[1].title}
+            price={products[1].price}
+            description={products[1].description}
+            />
+        </div>
+    );
+}
+
+
+My Product.js looked like...
+import React from 'react';
+
+export default function Product(props) {
+    return (
+        <article className="product">
+            <h2>{props.title}</h2>
+            <p className="price">${props.price}</p>
+            <p>{props.description}</p>
+        </article>
+    );
+}
+
+
+With this challenge I got stuck, but only because I forgot to change the index number for the second set of data. Once I figured it out, everything worked as expected
+
+--Adding "normal JS logic to Components"--
+
+
 */
