@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 //Importing a ReactDOM object from the reactDom 3rd party library into index.js
+import React from "react";
 
 import "./index.css";
 import App from "./App";

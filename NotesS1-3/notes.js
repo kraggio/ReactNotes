@@ -217,7 +217,52 @@ export default function Product(props) {
 
 With this challenge I got stuck, but only because I forgot to change the index number for the second set of data. Once I figured it out, everything worked as expected
 
---Adding "normal JS logic to Components"--
+--Splitting Components Into Multiple Components--
+- As projects develop, your components get bigger, since we're adding more and more JSX logic to them
+- This is why React uses component concepts which allows us to split our app into separate building blocks
+- These building blocks allow us to keep our components and code base small and manageable while being able to complete a complex UI
+- The bigger your application gets and components become, the more you want to look into splitting them up
+- Props are our way to pass data from component A to B
 
+--The concept of "Composition(children props)"---
+- "Card" is known widely in web development
+- Reusable wrapper content using children props and components
+- Allows to save from code duplication
+- Keeps components clean
+- Components and elements together
+- Composition is important
+- Whenever you combine componenets, you are using composition
 
+--First Summary--
+- You build UI by building and combining components
+- Sharing data across components through props
+- With building components, we are splitting up our code across multiple files and building blocks
+- Every custom component you build either uses other components or built HTML in elements
+
+--A closer look at JSX--
+- JSX is a way to build HTML in React
+- In a lot of other React projects, react imports are used(this was needed to be imported in all files where JSX was used in the past) But not needed now
+- JSX code is syntactic sugar!
+- Wrapper is needed because in the createElement world you create one element that can have "child" elements
+
+--An Alternative Function Syntax--
+Using arrow functions also is an alternative to functions
+EX:
+const example = (ex) => {
+    return ();
+}
+
+--Quiz from Section 3--
+I only got this question wrong:
+
+How can you output data in React components (i.e in he returned JSX code)?
+
+I chose: "React has a special syntax that allows you to output variable values (i.e values stored in variables) and nothing else: Opening & closing curly braces."
+I missed the wording of 'Nothing Else' changing the context of the answer. 
+
+The correct answer was:
+"You can use single curlly braces(opening and closing with any JS expression between them."
+
+This is the conclusion of Sections 1-3
+Overall my biggest struggle was the assignment in which we created our own components in a new file, however only because I did not want to break the code. I will continue to get comfortable with being okay with errors, and troubleshooting them.
 */
