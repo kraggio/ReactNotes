@@ -118,6 +118,17 @@ ASSIGNMENT 4: TIME TO PRACTICE: CONDITIONAL CONTENT
 Assignment done in ExpenseList.js, changes made in NewExpense, ExpenseForm, 
 
 --Demo App: Adding a Chart--
+- Created and added to the Chart.js & ChartBar.js
+- Learned about dynamically adding css (pretty cool)
+
+--Wrap up and next steps--
+- Created ExpensesChart.js
+- ... is a 'spread operator'
+- Created a fill bar 
+
+QUIZ 3: LEARNING CHECK: OUTPUTTING LISTS & CONDITIONAL CONTENT:
+- Short quiz
+- I got all 3 correct first try
 
 
 */

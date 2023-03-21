@@ -16,7 +16,7 @@ const ExpenseItem = (props) => {
   //removing all these things makes it a stateless component
 
   return (
-    <l1>
+    <li>
       <Card className="expense-item">
         <ExpenseDate date={props.date} />
         <div className="expense-item__description">
@@ -25,7 +25,7 @@ const ExpenseItem = (props) => {
         </div>
         {/* <button onClick={clickHandler}>Change Title</button> */}
       </Card>
-    </l1>
+    </li>
   );
 };
 
