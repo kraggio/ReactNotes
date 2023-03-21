@@ -190,7 +190,16 @@ export default function App() {
 - We're doing this using props to call our function and passing data to the function and lifting that data up to the app component
 
 ASSIGNMENT 2: TIME TO PRACTICE: WORKING WITH EVENTS AND STATE
+(this assignment was done via editing the application directly. Refer to ./Expenses/ExpensesFilter.js)
 
+--Controlled vs uncontrolled components & stateless vs stateful components--
+- Controlled components are ones that are controlled by the parent component
+- Whenever you use two-way binding, you are contolling a component
+- Stateless components are ones that are not controlled by the parent component
+- Presentational vs stateless components
+- In all react app you build, you will have a couple of components that manage some state
+- We will have a lot more stateless components since we want to split into small reusable building blocks
 
+QUIZ 2: LEARNING CHECK: WORKING WITH EVENTS AND STATES
 
 */
