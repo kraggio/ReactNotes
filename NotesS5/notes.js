@@ -64,6 +64,60 @@ const filteredExpenses = props.items.filter((expense) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
   added in Expenses.js
-  
+
+  --Outputting Conditional Content--
+  - Conditional content is about rendering different output under different conditions
+    {filteredExpenses.length === 0 && <p>No expenses found.</p>}
+        {filteredExpenses.length > 0 &&
+          filteredExpenses.map((expense) => (
+            <ExpenseItem
+              key={expense.id}
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+            ></ExpenseItem>
+          ))} 
+        
+  Replaced the above. I am storing the code here to show a different way, but remember this is not what was being show in this lesson
+
+  CODING EXERCISE 10: OUTPUTTING CONDITIONAL CONTENT:
+  your task is to conditionally show a warning box once a user has clicked a specific button. Inside that warning dialog, another button allows users to dismiss the warning (i.e., remove the warning box from the screen).
+
+  import React from 'react';
+// don't change the Component name "App"
+export default function App() {
+    const [isDeleting, setIsDeleting] = React.useState(false);
+    function deleteHandler() {
+        setIsDeleting(true);
+    }
+    function proceedHandler() {
+        setIsDeleting(false);
+    }
+    let warning;
+    if (isDeleting) {
+        warning = (
+            <div id="alert">
+              <h2>Are you sure?</h2>
+              <p>These changes can't be reverted!</p>
+              <button onClick={proceedHandler}>Proceed</button>
+            </div>
+        );
+    }
+    return (
+      <div>
+        {warning}
+        <button onClick={deleteHandler}>Delete</button>
+      </div>
+    );
+}
+
+--Adding Conditional Return Statements--
+
+ASSIGNMENT 4: TIME TO PRACTICE: CONDITIONAL CONTENT
+
+Assignment done in ExpenseList.js, changes made in NewExpense, ExpenseForm, 
+
+--Demo App: Adding a Chart--
+
 
 */
